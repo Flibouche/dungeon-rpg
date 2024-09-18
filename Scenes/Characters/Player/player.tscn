@@ -117,6 +117,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("animPlayerNode", "spriteNode", "stateMachineNode")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0183868, 2.38419e-07, 0.00028801)
 script = ExtResource("1_uo361")
 animPlayerNode = NodePath("AnimationPlayer")
 spriteNode = NodePath("Sprite3D")
