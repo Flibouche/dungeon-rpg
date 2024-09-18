@@ -49,21 +49,6 @@ tracks/0/keys = {
 "values": [ExtResource("1_uefek"), ExtResource("1_uefek"), ExtResource("1_uefek"), ExtResource("2_c3tfi"), ExtResource("3_5v3vv"), ExtResource("4_brcnc"), ExtResource("5_66ra2"), ExtResource("6_63pim"), ExtResource("7_bbet8"), ExtResource("8_uc3uq"), ExtResource("9_7gout"), ExtResource("10_pmogt"), ExtResource("11_g5oq7"), ExtResource("12_0xt51"), ExtResource("13_hx16p"), ExtResource("14_v58wa"), ExtResource("15_arbpw"), ExtResource("16_rcavg"), ExtResource("17_ahl12"), ExtResource("18_fryh3")]
 }
 
-[sub_resource type="Animation" id="Animation_dykhb"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite3D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("1_uefek")]
-}
-
 [sub_resource type="Animation" id="Animation_1guar"]
 resource_name = "Move"
 loop_mode = 1
@@ -79,6 +64,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("19_h2t74"), ExtResource("20_5ct1k"), ExtResource("21_cqar8"), ExtResource("22_yv6rx"), ExtResource("23_kev80"), ExtResource("24_hng2l"), ExtResource("25_igdym"), ExtResource("26_tk1ee"), ExtResource("27_fb1mp"), ExtResource("28_7nn5j"), ExtResource("29_22pgy"), ExtResource("30_dirb5")]
+}
+
+[sub_resource type="Animation" id="Animation_dykhb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_uefek")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_51u6y"]
