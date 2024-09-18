@@ -1,11 +1,11 @@
 using Godot;
 using System;
 
-public partial class PlayerIdleState : Node
+public partial class PlayerMoveState : Node
 {
     public override void _Ready()
     {
         Player characterNode = GetOwner<Player>();
-        characterNode.animPlayerNode.Play(GameConstants.ANIM_IDLE);
+        characterNode.animPlayerNode.Play(GameConstants.ANIM_MOVE);
     }
 }
