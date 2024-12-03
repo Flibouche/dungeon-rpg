@@ -42,6 +42,23 @@
 [ext_resource type="Texture2D" uid="uid://b41jjeduktgq4" path="res://Assets/Sprites/Characters/Player/Sliding/Sliding_005.png" id="37_xmu4u"]
 [ext_resource type="Script" path="res://Scripts/Characters/Player/PlayerDashState.cs" id="38_470m6"]
 
+[sub_resource type="Animation" id="Animation_vyvqk"]
+resource_name = "Dash"
+length = 1.00002
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.5, 0.666667, 0.833333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("32_5c1kc"), ExtResource("33_vuvyj"), ExtResource("34_b4a76"), ExtResource("35_tpilo"), ExtResource("36_mug8w"), ExtResource("37_xmu4u")]
+}
+
 [sub_resource type="Animation" id="Animation_73q6y"]
 resource_name = "Idle"
 loop_mode = 1
@@ -91,23 +108,6 @@ tracks/0/keys = {
 "values": [ExtResource("1_uefek")]
 }
 
-[sub_resource type="Animation" id="Animation_vyvqk"]
-resource_name = "Dash"
-length = 1.00002
-step = 0.166667
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite3D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.5, 0.666667, 0.833333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("32_5c1kc"), ExtResource("33_vuvyj"), ExtResource("34_b4a76"), ExtResource("35_tpilo"), ExtResource("36_mug8w"), ExtResource("37_xmu4u")]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_51u6y"]
 _data = {
 "Dash": SubResource("Animation_vyvqk"),
@@ -143,5 +143,10 @@ script = ExtResource("33_cwtrh")
 [node name="IdleState" type="Node" parent="StateMachine"]
 script = ExtResource("32_0oo47")
 
-[node name="DashState" type="Node" parent="StateMachine"]
+[node name="DashState" type="Node" parent="StateMachine" node_paths=PackedStringArray("dashTimerNode")]
 script = ExtResource("38_470m6")
+dashTimerNode = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="StateMachine/DashState"]
+wait_time = 0.4
+one_shot = true
