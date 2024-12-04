@@ -121,6 +121,8 @@ _data = {
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("AnimPlayerNode", "SpriteNode", "StateMachineNode")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0183868, 2.38419e-07, 0.00028801)
 collision_layer = 2
+floor_max_angle = 1.55334
+floor_snap_length = 0.2
 script = ExtResource("1_uo361")
 AnimPlayerNode = NodePath("AnimationPlayer")
 SpriteNode = NodePath("Sprite3D")
